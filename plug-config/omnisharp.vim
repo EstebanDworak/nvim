@@ -33,8 +33,6 @@ let g:omnicomplete_fetch_full_documentation = 1
 " You might also want to look at the echodoc plugin.
 set previewheight=5
 
-" Tell ALE to use OmniSharp for linting C# files, and no other linters.
-let g:ale_linters = { 'cs': ['OmniSharp'] }
 
 " Update semantic highlighting on BufEnter, InsertLeave and TextChanged
 let g:OmniSharp_highlighting = 2
@@ -109,8 +107,8 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_highlight_types = 2
 
 " if using ultisnips, set g:OmniSharp_want_snippet to 1
-"let g:OmniSharp_want_snippet = 1
+let g:OmniSharp_want_snippet = 1
 
 
-inoremap <expr> <Tab> pumvisible() ? '<C-n>' :
-\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
