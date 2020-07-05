@@ -13,9 +13,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tomasiser/vim-code-dark'
     Plug 'SirVer/ultisnips'
-    Plug 'prabirshrestha/asyncomplete.vim'
+    "Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'mhinz/vim-signify'
+    Plug 'wincent/terminus'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
     "Plug 'shougo/echodoc'
     "Plug 'preservim/nerdcommenter'
     "Plug 'liuchengxu/vim-which-key'
@@ -79,4 +82,26 @@ source $HOME/.config/nvim/plug-config/signify.vim
 
 
 "MAPPINGS
-imap <C-Space> <C-x><C-o>
+"imap <C-Space> <C-x><C-o>
+
+imap <C-s> <Esc>:w<CR>
+
+nmap <C-s> :w<CR>
+nmap <leader>s :source $MYVIMRC<CR>
+nmap <Leader>o o<Esc>^Da
+nmap <Leader>O O<Esc>^Da
+
+nmap <C-b> :NERDTreeToggle<CR>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <C-v> :vsplit<CR>
+nmap <C-x> :lclose<bar>b#<bar>bd #<CR>
+nmap <C-n> :vsplit<CR> :CtrlP<CR>
+
+nnoremap <TAB> :bnext<CR>
+nnoremap <S-TAB> :bprevious<CR>
+
+vnoremap < <gv
+vnoremap > >gv
