@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'OmniSharp/omnisharp-vim'
     Plug 'w0rp/ale'
     Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'editorconfig/editorconfig-vim'
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-fugitive'
@@ -13,12 +14,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tomasiser/vim-code-dark'
     Plug 'SirVer/ultisnips'
-    "Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/async.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'mhinz/vim-signify'
+    "Plug 'mhinz/vim-signify'
+    Plug 'airblade/vim-gitgutter'
+    "Plug 'junegunn/fzf'
     Plug 'wincent/terminus'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Plug 'shougo/echodoc'
     "Plug 'preservim/nerdcommenter'
     "Plug 'liuchengxu/vim-which-key'
@@ -59,11 +62,31 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set cmdheight=4
 set colorcolumn=80
-
+set updatetime=300
 
 " STYLE
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+
 colorscheme codedark
+
+"hi CocErrorSign ctermfg=167 ctermbg=blue guifg=#fb4934 guibg=blue
+ "hi CocErrorHihglight ctermfg=208 ctermbg=blue guifg=#fe8019 guibg=blue
+
+"hi CocErrorHihglight ctermbg=NONE ctermfg=73   guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#5fafaf
+
+
+
+highlight CocHintHighlight guisp=#646695 gui=undercurl
+highlight CocHintFloat guifg=#646695
+highlight CocHintSign guifg=#646695
+
+
+highlight CocWarningHighlight guisp=#CE9178 gui=undercurl
+highlight CocWarningFloat guifg=#CE9178
+highlight CocWarningSign guifg=#CE9178
+
+
 
 
 " ADITIONAL CONFIG
@@ -74,6 +97,8 @@ source $HOME/.config/nvim/plug-config/echodoc.vim
 source $HOME/.config/nvim/plug-config/ale.vim
 source $HOME/.config/nvim/plug-config/ctrlp.vim
 source $HOME/.config/nvim/plug-config/signify.vim
+source $HOME/.config/nvim/plug-config/asyncomplete.vim
+source $HOME/.config/nvim/plug-config/ulti.vim
 "source $HOME/.config/nvim/vim-plug/plugins.vim
 "source $HOME/.config/nvim/general/settings.vim
 "source $HOME/.config/nvim/keys/mappings.vim
@@ -83,7 +108,6 @@ source $HOME/.config/nvim/plug-config/signify.vim
 
 "MAPPINGS
 "imap <C-Space> <C-x><C-o>
-
 imap <C-s> <Esc>:w<CR>
 
 nmap <C-s> :w<CR>
