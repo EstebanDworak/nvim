@@ -1,5 +1,19 @@
 {
-  "diagnostic.errorSign": ">>",
-  "diagnostic.warningSign": "!!",
-  "suggest.autoTrigger": "trigger"
+    "diagnostic.displayByAle": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "javascript",
+        "html",
+        "css",
+        "json",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact"
+    ],
+    "prettier.semi": true,
+    "prettier.useTabs": false,
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "avoid",
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 4
 }

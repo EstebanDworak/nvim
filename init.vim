@@ -14,15 +14,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tomasiser/vim-code-dark'
     Plug 'SirVer/ultisnips'
-    Plug 'prabirshrestha/asyncomplete.vim'
-    Plug 'prabirshrestha/async.vim'
+    "Plug 'prabirshrestha/asyncomplete.vim'
+    "Plug 'prabirshrestha/async.vim'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    "Plug 'mhinz/vim-signify'
     Plug 'airblade/vim-gitgutter'
-    Plug 'rodpl/vim-dotnet'
+
+    "Plug 'mhinz/vim-signify'
+    "Plug 'rodpl/vim-dotnet'
     "Plug 'junegunn/fzf'
-    Plug 'wincent/terminus'
-    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'wincent/terminus'
+
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Plug 'shougo/echodoc'
     "Plug 'preservim/nerdcommenter'
     "Plug 'liuchengxu/vim-which-key'
@@ -81,8 +83,9 @@ source $HOME/.config/nvim/plug-config/echodoc.vim
 source $HOME/.config/nvim/plug-config/ale.vim
 source $HOME/.config/nvim/plug-config/ctrlp.vim
 source $HOME/.config/nvim/plug-config/signify.vim
-source $HOME/.config/nvim/plug-config/asyncomplete.vim
+"source $HOME/.config/nvim/plug-config/asyncomplete.vim
 source $HOME/.config/nvim/plug-config/ulti.vim
+source $HOME/.config/nvim/plug-config/coc.vim
 "source $HOME/.config/nvim/vim-plug/plugins.vim
 "source $HOME/.config/nvim/general/settings.vim
 "source $HOME/.config/nvim/keys/mappings.vim

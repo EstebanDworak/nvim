@@ -25,3 +25,13 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+
+function s:completor(opt, ctx)
+  call mylanguage#get_async_completions({candidates, startcol -> asyncomplete#complete(a:opt['name'], a:ctx, startcol, candidates) })
+endfunction
+
+au User asyncomplete_setup call asyncomplete#register_source({
+    \ 'name': 'flow',
+    \ 'whitelist': ['javascript'],
+    \ 'completor': function('s:completor'),
+    \ })

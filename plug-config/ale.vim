@@ -1,5 +1,8 @@
 let g:ale_fix_on_save = 0
-let g:ale_linters = { 'cs': ['OmniSharp'] }
+"let g:ale_linters = { 'cs': ['OmniSharp'], }
+
+
+
 let g:ale_echo_msg_format = '[%severity%] [%linter%] %s'
 let g:ale_set_balloons = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -28,4 +31,5 @@ highlight ALEStyleWarningSign guifg=#608B4E
 " ERROR STYLE
 highlight ALEStyleError guisp=#608B4E gui=undercurl
 highlight ALEStyleErrorSign guifg=#608B4E
+
 
