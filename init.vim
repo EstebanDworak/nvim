@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'Xuyuanp/nerdtree-git-plugin'
     "Plug 'mhinz/vim-signify'
     Plug 'airblade/vim-gitgutter'
+    Plug 'rodpl/vim-dotnet'
     "Plug 'junegunn/fzf'
     Plug 'wincent/terminus'
     "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -36,6 +37,8 @@ let g:mapleader = "\<Space>"
 
 
 " SETS
+set shortmess=
+
 set guicursor=
 set mouse=a
 set noshowmatch
@@ -60,33 +63,14 @@ set scrolloff=8
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-set cmdheight=4
+set cmdheight=3
 set colorcolumn=80
 set updatetime=300
 
+
 " STYLE
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-
-
 colorscheme codedark
-
-"hi CocErrorSign ctermfg=167 ctermbg=blue guifg=#fb4934 guibg=blue
- "hi CocErrorHihglight ctermfg=208 ctermbg=blue guifg=#fe8019 guibg=blue
-
-"hi CocErrorHihglight ctermbg=NONE ctermfg=73   guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#5fafaf
-
-
-
-highlight CocHintHighlight guisp=#646695 gui=undercurl
-highlight CocHintFloat guifg=#646695
-highlight CocHintSign guifg=#646695
-
-
-highlight CocWarningHighlight guisp=#CE9178 gui=undercurl
-highlight CocWarningFloat guifg=#CE9178
-highlight CocWarningSign guifg=#CE9178
-
-
 
 
 " ADITIONAL CONFIG
@@ -114,7 +98,6 @@ nmap <C-s> :w<CR>
 nmap <leader>s :source $MYVIMRC<CR>
 nmap <Leader>o o<Esc>^Da
 nmap <Leader>O O<Esc>^Da
-
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -123,9 +106,10 @@ nmap <C-l> <C-w>l
 nmap <C-v> :vsplit<CR>
 nmap <C-x> :lclose<bar>b#<bar>bd #<CR>
 nmap <C-n> :vsplit<CR> :CtrlP<CR>
-
-nnoremap <TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
+nmap <leader>ca :OmniSharpGetCodeActions<CR>
+nmap <leader>f :OmniSharpCodeFormat<CR>
+nmap <TAB> :bnext<CR>
+nmap <S-TAB> :bprevious<CR>
 
 vnoremap < <gv
 vnoremap > >gv

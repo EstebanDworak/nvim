@@ -11,6 +11,7 @@ function! GoCSharp()
     nnoremap <buffer> <leader>gd :OmniSharpGotoDefinition<CR>
     nnoremap <buffer> <leader>gr :OmniSharpFindUsages<CR>
     nnoremap <buffer> <leader>gi :OmniSharpFindImplementations<CR>
+   nnoremap <buffer> <leader>gd :OmniSharpDocumentation<CR>
 
     nnoremap <buffer> <leader>rn :OmniSharpRename<CR>
     nnoremap <buffer> <leader>fx :OmniSharpFixUsings<CR>
@@ -22,14 +23,12 @@ endfunction
 
 
 
-
-
-
-
 let g:OmniSharp_diagnostic_overrides = {
 "\ 'IDE0010': {'type': 'I'},
 "\ 'IDE0055': {'type': 'W', 'subtype': 'Style'},
-"\ 'IDE0058': {'type': 'None'},
-"\ 'IDE0003': {'type': 'None'},
+\ 'IDE0003': {'type': 'None'},
+\ 'IDE0058': {'type': 'None'},
+\ 'SA1200': {'type': 'None'},
+\ 'SA1600': {'type': 'W', 'subtype': 'style'},
 "\ 'RemoveUnnecessaryImportsFixable': {'type': 'None'}
 \}
